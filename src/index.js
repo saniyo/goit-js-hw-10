@@ -37,7 +37,7 @@ function onInput(e) {
         clearRender();
         Notify.info(
           'Too many mathces found. Please enter a more spesific name',
-          { timeout: 100, cssAnimationDuration: 1000 }
+          { timeout: 2000, cssAnimationDuration: 1000 }
         );
       }
     })

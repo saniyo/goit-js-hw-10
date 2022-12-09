@@ -6,19 +6,19 @@ import { fetchCountries } from './js/fetchCountries';
 const DEBOUNCE_DELAY = 300;
 
 const refs = {
-  searchQueary: document.querySelector('#search-box'),
+  searchQuery: document.querySelector('#search-box'),
   countryList: document.querySelector('.country-list'),
   countryInfo: document.querySelector('.country-info'),
 };
 
 let formValue = '';
 
-refs.searchQueary.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
+refs.searchQuery.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 
 function onInput(e) {
   e.preventDefault();
-  formValue = refs.searchQueary.value.trim();
+  formValue = refs.searchQuery.value.trim();
   if (formValue === '') {
     clearRender();
     return;
